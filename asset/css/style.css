@@ -1,0 +1,272 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+}
+
+:root {
+  --bg-color: whitesmoke;
+  --main-color: rgba(50,50,50);
+}
+
+.singIn {
+  height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+.img-avatar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-avatar img {
+  width: 10%;
+  border: 1px solid var(--main-color);
+}
+
+.img-avatar img:hover {
+  width: 11%;
+  transition: all 0.3s;
+}
+
+.chose-avatar {
+  display: none;
+}
+
+#singIn-control {
+  width: 10%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.singIn button,input {
+  padding: 10%;
+}
+
+.pseudo {
+  background-color: var(--bg-color);
+  border: none;
+}
+
+.pseudo:hover {
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.pseudo:focus {
+  outline: 1px solid black;
+}
+
+.btn-active:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  transition: all 0.3s;
+}
+
+li span {
+  margin-left: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+li:nth-child(1) {
+  margin: auto;
+}
+
+li img {
+  width: 50px;
+}
+
+ul {
+  padding: 0 40px 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul div{
+  gap: 30px;
+}
+
+ul div:first-child {
+  display: flex;
+}
+
+.info-window {
+  background-color: var(--main-color);
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 10%;
+  color: var(--bg-color);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  clip-path: polygon(0 0, 56% 50%, 100% 50%, 100% 100%, 19% 100%, 19% 50%);
+}
+
+.info-window p {
+  padding-left: 20%;
+}
+
+.game-tips {
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.info-container p {
+  margin: 0;
+}
+
+.info-container {
+  background-color: var(--main-color);
+  position: absolute;
+  top: 7%;
+  clip-path: polygon(6% 0, 22% 20%, 100% 20%, 100% 100%, 0 100%, 0 29%);
+  width: 15%;
+  height: 25%;
+  color: var(--bg-color);
+}
+
+main section {
+  gap: 20px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.firstpsec {
+  margin: 0;
+}
+
+.roulette-container {
+  width: 40%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.roulette-container p{
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-color);
+  box-shadow: 0px 5px 15px black, 0px -5px 15px black;
+}
+
+.roulette-container div img {
+  position: absolute;
+  width: 50%;
+}
+
+.choose-container {
+  width: 50%;
+  height: 30%;
+  text-align: center;
+}
+
+.choose-one {
+  gap: 30px;
+  height: 70%;
+  color: var(--bg-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.choose-one div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--main-color);
+}
+
+.choose-img1 {
+  width: 100%;
+}
+
+.choose-img2 {
+  width: 100%;
+}
+
+.choose-img3 {
+  width: 100%;
+}
+
+.chooseCutImg-size {
+  width: 120%;
+  transition: all 0.3s;
+}
+
+.chooseVandalImg-size {
+  width: 120%;
+  transition: all 0.3s;
+}
+
+.chooseOdinImg-size {
+  width: 120%;
+  transition: all 0.3s;
+}
+
+.btn-play {
+  padding: 1% 2% 1% 2%;
+}
+
+.user-choosed {
+  width: 70%;
+  transition: all 0.3s;
+}
+
+.ordi-choosed {
+  overflow: hidden;
+  width: 70%;
+}
+
+.finisher-win {
+  height: 98vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  color: green;
+}
+
+.finisher-loose {
+  height: 98vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  color: red;
+}
+
+.finisher-egal {
+  display: flex;
+  height: 98vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  color: orange;
+}
+
+.btn-replay {
+  padding: 1% 2% 1% 2%;
+}
