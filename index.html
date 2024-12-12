@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./asset/css/style.css">
+  <script defer src="./asset/js/script.js"></script>
+  <title> Pierre ,Feuille ,Ciseaux</title>
+</head>
+<body>
+  <div class="singIn">
+    <div class="img-avatar">
+      <div class="chose-avatar"> 
+        <img src="./asset/img/avatar1.png" alt="Avatar 1">
+        <img src="./asset/img/avatar2.png" alt="avatar 2">
+        <img src="./asset/img/avatar3.png" alt="avatar 3">
+    </div>
+    <img class="modif-avatar" src="./asset/img/modifAvatar.png" alt="modif Avatar"></div>
+    <form id="singIn-control" action="">
+    <input class="pseudo" type="text" placeholder="Pseudo" required>
+    <span id="titlename"></span>
+    <button>Entrer !!</button>
+    </form>
+  </div>
+  <header>
+    <nav>
+      <ul>
+        <div><li><img class="user-avatar" src="./asset/img/modifAvatar.png" alt="modif Avatar"></li>
+          <li><img class="info-img" src="./asset/img/Info.png" alt="Info jeu"><div class="game-tips"><p>Le couteau bat la Odin</p><p>La Odin bat la Vandal</p><p>La Vandal bat le Couteau</p></div><div class="info-window"><p>Astuces jeu</p></div></li></div>
+        <div><li>Ordinateur score :<span class="score-ordi"></span></li>
+        <li><span class="user"></span><span>score :</span><span class="score-user"></span></li></div>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <p class="firstpsec">Nombre de partie restantes :</p><span class="nb-partie"></span>
+      <div class="roulette-container">
+        <p><img class="user-choosed" src="./asset/img/choix.png" alt="user"></p>
+        <span>VS</span>
+        <p><img class="ordi-choosed" src="./asset/img/choix.png" alt="ordi"></p>
+      </div>
+      <p class="valid-choose"></p>
+      <div class="choose-container">
+        <p>Choisit :</p>
+        <div class="choose-one">
+          <div><img class="choose-img1" src="./asset/img/cut.png" alt="choix 1"></div>
+          <div><img class="choose-img2" src="./asset/img/vandal.png" alt="choix 2"></div>
+          <div><img class="choose-img3" src="./asset/img/odin.png" alt="choix 3"></div>
+        </div>
+      </div>
+      <button class="btn-active btn-play">Jouer !!!</button>
+    </section>
+  </main>
+  <div class="finisher-win">
+    <div>Vous avez gagné !!</div>
+    <button class="btn-active btn-replay">Rejouer !!!</button>
+  </div>
+  <div class="finisher-loose">
+    <div>Vous avez perdu !!</div>
+    <button class="btn-active btn-replay">Rejouer !!!</button>
+  </div>
+  <div class="finisher-egal">
+    <div>Égalité !!</div>
+    <button class="btn-active btn-replay">Rejouer !!!</button>
+  </div>
+</body> 
+</html> 
