@@ -31,6 +31,7 @@ let finisherEgal = document.querySelector(".finisher-egal");
 let btnReplayLoose = document.querySelector(".finisher-loose .btn-replay");
 let btnReplayEgal = document.querySelector(".finisher-egal .btn-replay");
 let btnReplay = document.querySelector(".btn-replay");
+let linkIcon = document.querySelector(".link-icon")
 let rouletteContainer1 = document.querySelector(
   ".roulette-container p:first-child"
 );
@@ -221,9 +222,6 @@ function lancherGame() {
     btnPlay.classList.add("btn-active");
   }
   btnPlay.addEventListener("click", game);
-}
-
-function game() {
   validChoose.textContent = "...";
   validChoose.style.color = "black";
   rouletteContainer1.style.boxShadow =
@@ -231,6 +229,9 @@ function game() {
   rouletteContainer2.style.boxShadow =
     "0px 5px 15px black, 0px -5px 15px black";
   userChoosed.style.width = "70%";
+}
+
+function game() {
 
   btnPlay.disabled = true;
 
@@ -405,15 +406,27 @@ function game() {
       partie = partie + 1;
       nbpartie.textContent = partie;
     }
-    
+
+
     if (partie == 0) {
       btnPlay.disabled = true;
     }
 
     setTimeout(resetPage, 1000);
     function resetPage() {
-      function reload() {
-        window.location.reload();
+
+      function restartGame() {
+        user = 0
+        ordi = 0
+        partie = 10
+        userScore.textContent = user;
+        ordiScore.textContent = ordi;
+        nbpartie.textContent = partie;
+        header.style.display = "block";
+        main.style.display = "block";
+        finisherLoose.style.display = "none";
+        finisherWin.style.display = "none";
+        finisherEgal.style.display = "none";
       }
 
       if (partie == 0 && (user < ordi)) {
@@ -423,7 +436,10 @@ function game() {
         header.style.display = "none";
         main.style.display = "none";
         finisherLoose.style.display = "flex";
-        btnReplayLoose.addEventListener("click", reload);
+        btnReplayLoose.addEventListener("click", () => {
+          restartGame()
+          lancherGame()
+        });
       }
 
       if (partie == 0 && (user > ordi)) {
@@ -433,7 +449,10 @@ function game() {
         header.style.display = "none";
         main.style.display = "none";
         finisherWin.style.display = "flex";
-        btnReplay.addEventListener("click", reload);
+        btnReplay.addEventListener("click",  () => {
+          restartGame()
+          lancherGame()
+        });
       }
 
       if (partie == 0 && (user == ordi)) {
@@ -443,7 +462,10 @@ function game() {
         header.style.display = "none";
         main.style.display = "none";
         finisherEgal.style.display = "flex";
-        btnReplayEgal.addEventListener("click", reload);
+        btnReplayEgal.addEventListener("click", () => {
+          restartGame()
+          lancherGame()
+        });
       }
     }
   }
