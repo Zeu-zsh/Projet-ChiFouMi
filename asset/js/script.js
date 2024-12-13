@@ -405,6 +405,10 @@ function game() {
       partie = partie + 1;
       nbpartie.textContent = partie;
     }
+    
+    if (partie == 0) {
+      btnPlay.disabled = true;
+    }
 
     setTimeout(resetPage, 1000);
     function resetPage() {
@@ -413,7 +417,6 @@ function game() {
       }
 
       if (partie == 0 && (user < ordi)) {
-        btnPlay.disabled = true;
         lanchFinishLoose();
       }
       function lanchFinishLoose() {
@@ -424,7 +427,6 @@ function game() {
       }
 
       if (partie == 0 && (user > ordi)) {
-        btnPlay.disabled = true;
         lanchFinishWin();
       }
       function lanchFinishWin() {
@@ -435,7 +437,6 @@ function game() {
       }
 
       if (partie == 0 && (user == ordi)) {
-        btnPlay.disabled = true;
         lanchFinishEgal();
       }
       function lanchFinishEgal() {
