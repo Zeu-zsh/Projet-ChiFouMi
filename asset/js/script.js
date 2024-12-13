@@ -233,6 +233,13 @@ function lancherGame() {
 
 function game() {
 
+  validChoose.textContent = "...";
+  validChoose.style.color = "black";
+  rouletteContainer1.style.boxShadow =
+    "0px 5px 15px black, 0px -5px 15px black";
+  rouletteContainer2.style.boxShadow =
+    "0px 5px 15px black, 0px -5px 15px black";
+  userChoosed.style.width = "70%";
   btnPlay.disabled = true;
 
   setTimeout(() => {
